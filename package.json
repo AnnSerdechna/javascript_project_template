@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel ./src/index.html --open"
   },
   "keywords": [],
   "author": "Anna",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.8.6",
+    "parcel": "^1.12.3"
+  }
 }
