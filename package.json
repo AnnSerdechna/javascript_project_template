@@ -4,13 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./src/index.html --open"
+    "start": "parcel ./src/index.html --open",
+    "lint:html": "linthtml ./src/index.html",
+    "lint:css": "stylelint **/*.scss",
+    "lint:js": "eslint ./src",
+    "lint": "concurrently \"npm run lint:html\" \"npm run lint:css\" \"npm run lint:js\""
   },
   "keywords": [],
   "author": "Anna",
   "license": "ISC",
   "devDependencies": {
     "@linthtml/linthtml": "^0.8.6",
-    "parcel": "^1.12.3"
+    "concurrently": "^7.1.0",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^7.0.4",
+    "parcel": "^1.12.3",
+    "stylelint": "^14.8.1",
+    "stylelint-config-standard-scss": "^3.0.0"
   }
 }
